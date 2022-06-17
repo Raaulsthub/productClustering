@@ -1,6 +1,5 @@
 import numpy as np
-from sqlalchemy import null
-import weightSImilarity as ws
+import weightSim as ws
 import pandas as pd
 
 def cluster(productList):
@@ -8,7 +7,7 @@ def cluster(productList):
     for product in productList:
         if not clusters:
             clusters.append([product])
-        mostSimilar = null
+        mostSimilar = None
         similarity = 0
         for cluster in clusters:
             if (ws.clusterSimilarity(cluster, product) > similarity):

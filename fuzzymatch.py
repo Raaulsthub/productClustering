@@ -50,6 +50,7 @@ class StringMatch():
             match_output = self._make_matchdf()
         elif output_fmt == 'dict':
             match_output = self._make_matchdict()
+        
             
         return match_output
         
@@ -82,6 +83,7 @@ class StringMatch():
             indptr, indices, data)
 
         self.sprse_mtx = csr_matrix((data,indices,indptr), shape=(M,N))
+        print(data)
     
     
     def _make_matchdf(self):
