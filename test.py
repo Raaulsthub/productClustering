@@ -1,4 +1,6 @@
-import stringdist as sd
-import functions
+import weightSim as ws
 
-print((functions.lcs("BISC", "BISCOITO") / min(len("BISC"), len("BISCOITO"))))
+a = 'Banana Caturra GRANDEL UN'
+b = 'Banana Caturra kg '
+
+print(ws.tws_similarity(a, b))

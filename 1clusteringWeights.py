@@ -10,9 +10,9 @@ def cluster(productList):
         mostSimilar = None
         similarity = 0
         for cluster in clusters:
-            if (ws.clusterSimilarity(cluster, product) > similarity):
+            if (ws.cluster_similarity(cluster, product) > similarity):
                 mostSimilar = cluster
-                similarity = ws.clusterSimilarity(cluster, product)
+                similarity = ws.cluster_similarity(cluster, product)
 
         if similarity < 1.25:
             clusters.append([product])
